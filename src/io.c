@@ -145,6 +145,11 @@ int get_o3(void)
     return (terminal_output_data_copy.dig_out & 0x04) >> 2;
 }
 
+int get_o4(void)
+{
+    return (terminal_output_data_copy.dig_out & 0x08) >> 3;
+}
+
 int get_ana1(void)
 {
     return terminal_output_data_copy.ana_out[0];
@@ -175,6 +180,15 @@ void set_i3(int i)
         terminal_input_data_copy.dig_in |= 0x04;
     else
         terminal_input_data_copy.dig_in &= ~(0x04);
+}
+
+void set_i4(int i)
+{
+    printf("I4 = %d\n", i);
+    if (i >= 0)
+        terminal_input_data_copy.dig_in |= 0x08;
+    else
+        terminal_input_data_copy.dig_in &= ~(0x08);
 }
 
 void set_pot1(int v)

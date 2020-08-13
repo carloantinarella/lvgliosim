@@ -14,6 +14,7 @@ int terminal_io_init(void);
 int get_o1(void);
 int get_o2(void);
 int get_o3(void);
+int get_o4(void);
 
 /*
  * Return analog output value
@@ -26,6 +27,7 @@ int get_ana1(void);
 void set_i1(int);
 void set_i2(int);
 void set_i3(int);
+void set_i4(int);
 
 /*
  * Set analog input value
